@@ -109,7 +109,7 @@ address {
 ol,
 ul,
 dl {
-  margin-top: 0;
+  margin-left: 0;
   margin-bottom: 1rem;
 }
 
@@ -3345,7 +3345,7 @@ input[type="button"].btn-block {
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
-  text-align: center;
+  text-align: left;
   white-space: nowrap;
   background-color: #e9ecef;
   border: 0.125rem solid #ced4da;
