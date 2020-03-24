@@ -1,5 +1,4 @@
 $(function() {
-
     $("#contactForm input,#contactForm textarea").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function($form, event, errors) {
@@ -18,6 +17,8 @@ $(function() {
             if (firstName.indexOf(' ') >= 0) {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
+            $this = $("#sendMessageButton");	      
+            $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
             $.ajax({
                 url: "https://formspree.io/mjvojowv",
                 method: "POST",
@@ -25,11 +26,9 @@ $(function() {
                     name: name,
                     phone: phone,
                     email: email,
-                    message: message,
-                    var firstName = name; // For Success/Failure Message
-
+                    message: message
                 },
-		dataType: "json",
+		        dataType: "json",
                 cache: false,
                 success: function(data) {
                     // Success message
