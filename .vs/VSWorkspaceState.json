@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\img\\portfolio"
+    "\\img",
+    "\\img\\portfolio",
+    "\\js",
+    "\\mail"
   ],
-  "SelectedNode": "\\index.html",
+  "SelectedNode": "\\gulpfile.js",
   "PreviewInSolutionExplorer": false
 }
